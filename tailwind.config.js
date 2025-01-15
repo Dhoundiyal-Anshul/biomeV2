@@ -12,7 +12,14 @@ export default {
       height: {
         19: "75px",
       },
+      scrollBehavior: {
+        smooth: "smooth",
+      },
     },
   },
   plugins: [],
+  corePlugins: {
+    preflight: true,
+  },
+  variants: {},
 };

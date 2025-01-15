@@ -3,7 +3,7 @@ import logo from "../assets/images/logo.png";
 function Navbar() {
   return (
     <nav className="flex justify-between items-center px-10 py-5">
-      <img src={logo} alt="Biome Logo" className="w-20 h-19" />
+      <img src={logo} alt="Biome Logo" className="w-10 h-10" />
 
       <div className="flex items-center gap-8">
         <NavLink text="Product" />
