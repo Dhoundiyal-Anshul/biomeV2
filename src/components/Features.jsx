@@ -52,15 +52,18 @@ function Features() {
   const decorative1Opacity = useTransform(smoothProgress, [0, 0.2], [0, 1]);
   const decorative1Scale = useTransform(smoothProgress, [0, 0.2], [0.8, 1]);
 
-  // Path animation
-  const pathLength = useTransform(smoothProgress, [0.1, 0.4], [0, 1]);
+  // Path animation - split into two parts with a longer pause
+  const pathLength = useTransform(smoothProgress, 
+    [0.1, 0.4, 0.5, 0.6], // Extended pause between 0.4-0.5
+    [0, 0.7, 0.7, 1] // Line stops at 70% until decorative2 appears
+  );
 
-  // Second decorative image animation
-  const decorative2Opacity = useTransform(smoothProgress, [0.2, 0.4], [0, 1]);
-  const decorative2Scale = useTransform(smoothProgress, [0.2, 0.4], [0.8, 1]);
+  // Second decorative image animation - faster appearance
+  const decorative2Opacity = useTransform(smoothProgress, [0.3, 0.35], [0, 1]);
+  const decorative2Scale = useTransform(smoothProgress, [0.3, 0.35], [0.8, 1]);
 
   // Second path animation
-  const path2Length = useTransform(smoothProgress, [0.4, 0.7], [0, 1]);
+  const path2Length = useTransform(smoothProgress, [0.6, 0.8], [0, 1]);
 
   // Add animation for decorative3
   const decorative3Opacity = useTransform(smoothProgress, [0.5, 0.7], [0, 1]);
@@ -73,7 +76,6 @@ function Features() {
     >
       {/* Black rounded rectangles */}
 
-      <div className="absolute left-1/2 -translate-x-1/2 top-[1572px] w-[1360px] h-[578px] bg-black rounded-[100px]" />
 
       {/* Main heading */}
       <div className="max-w-[1440px] mx-auto text-black text-[96px] font-bold font-lato px-10 py-20">
@@ -116,6 +118,12 @@ function Features() {
         style={{
           opacity: decorative2Opacity,
           scale: decorative2Scale,
+          transition: { 
+            type: "spring", 
+            stiffness: 200,  // Increased for faster motion
+            damping: 10,    // Reduced for faster settling
+            duration: 0.5   // Reduced duration for faster animation
+          }
         }}
       />
     </div>

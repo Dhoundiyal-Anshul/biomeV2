@@ -8,6 +8,7 @@ export default {
         merriweather: ["Merriweather", "serif"],
         inter: ["Inter", "sans-serif"],
         lato: ["Lato", "sans-serif"],
+        indie: ["Indie Flower", "cursive"],
       },
       height: {
         19: "75px",
@@ -22,4 +23,15 @@ export default {
     preflight: true,
   },
   variants: {},
+  theme: {
+    extend: {
+      // Add custom styles for scrollbar and html
+      '.body::-webkit-scrollbar': {
+        display: 'none'
+      },
+      html: {
+        scrollBehavior: 'smooth'
+      }
+    }
+  }
 };

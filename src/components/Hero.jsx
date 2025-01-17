@@ -4,38 +4,16 @@ import React from "react";
 import { motion } from "framer-motion";
 
 function Hero() {
-  // Add scroll event handler
-  const handleScroll = (e) => {
-    // Check if we're in the hero section (at the top)
-    if (window.scrollY < window.innerHeight) {
-      // If the user scrolls down
-      if (e.deltaY > 0) {
-        window.scrollTo({
-          top: window.innerHeight,
-          behavior: "smooth",
-        });
-      }
-    }
-  };
-
-  // Add event listener when component mounts
-  React.useEffect(() => {
-    window.addEventListener("wheel", handleScroll);
-
-    // Cleanup listener when component unmounts
-    return () => {
-      window.removeEventListener("wheel", handleScroll);
-    };
-  }, []);
-
   return (
     <div className="bg-black min-h-screen w-auto ">
       <Navbar />
 
       <div>
+
         <h1 className="text-white text-[80px] md:text-[200px] font-bold text-center font-poppins mt-[-200px] md:mt-[60px]">
           Biome
         </h1>
+
 
         <h2 className="text-white text-lg md:text-2xl font-bold text-center font-merriweather mt-[-320px] md:mt-[-60px]">
           Natural Waste-Based Building Materials
@@ -65,11 +43,11 @@ function Hero() {
         <motion.img
           src={decorative1}
           alt="Decorative-1"
-          className="absolute left-[200px] md:left-[300px] top-28 md:top-36 w-[80px] md:w-[200px]"
+          className="absolute left-[230px] md:left-[330px] top-28 md:top-36 w-[80px] md:w-[200px]"
           style={{ transform: "rotate(-20deg)" }}
           animate={{
-            rotate: [-20, -22, -20],
-            y: [0, -5, 0],
+            rotate: [-20, -25, -20],
+            y: [0, -15, 0],
           }}
           transition={{
             duration: 4,
@@ -84,8 +62,8 @@ function Hero() {
           className="absolute right-[230px] md:right-[330px] top-72 md:top-80 w-[80px] md:w-[200px]"
           style={{ transform: "rotate(19deg)" }}
           animate={{
-            rotate: [19, 21, 19],
-            y: [0, 5, 0],
+            rotate: [19, 25, 19],
+            y: [0, 15, 0],
           }}
           transition={{
             duration: 4,
