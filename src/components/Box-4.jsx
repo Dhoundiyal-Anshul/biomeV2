@@ -7,15 +7,15 @@ function Box4() {
   const teamMembers = [
     {
       id: 1,
-      image: "https://media.licdn.com/dms/image/v2/C4E03AQEvH5i_84c71A/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1516574069088?e=2147483647&v=beta&t=kJ0wC6kRAszes-GMxeQxYdopgc1FbgVoZnRtmEIy1T0",
+      image: "",
       position: "Co-Founder & Chief Operations Officer",
-      linkedin: "https://www.linkedin.com/in/himanshu-garg-32b30976/"
+      linkedin: ""
     },
     {
       id: 2,
-      image: "https://media.licdn.com/dms/image/v2/D5603AQE_yMFNQu9Elw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1722002468251?e=2147483647&v=beta&t=lvt2MoR9HZkk3hxzXGZF0mV_hRFiul0TI7_6AoN9MXY",
+      image: "",
       position: "Co-Founder & Chief Sustainability Officer",
-      linkedin: "https://www.linkedin.com/in/sumeetpopli/"
+      linkedin: ""
     },
     {
       id: 3,
